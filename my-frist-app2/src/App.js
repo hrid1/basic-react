@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import {Actor} from './avenger.js'
+import { useState } from 'react';
+import {Counter2} from './count.js'
+import { ExternalUser } from './infoUser.js';
 
 function App() {
 
@@ -23,15 +26,24 @@ function App() {
   return (
     <div className="App">
 
-      <h1>Products Details</h1>
 
-      {
-        products.map(item => <Product name={item.name} price={item.price}></Product>)
-      }
+    <ExternalUser> </ExternalUser>
 
-      {
+
+
+      {/* <Counter> </Counter> */}
+      {/* <Counter2></Counter2> */}
+     
+
+      {/* {
+        products.map(item => <Product name={item.name}<h1>Products Details</h1>
+
+       price={item.price}></Product>)
+      } */}
+
+      {/* {
         <Actor name='Tony' salary="12000"> </Actor>
-      }
+      } */}
 
       {/* <Product name="Mobile" price="24000"> </Product>
       <Product name="Laptop" price="89000"> </Product>
@@ -52,6 +64,25 @@ function Product(props){
     
   )
 
+}
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  const increseCount = () => setCount(count+1); 
+  const decreseCount = () => setCount(count-1);
+
+  // const increseCount = () => {
+  //   const newCount = count + 1;
+  //   setCount(newCount);
+ // }
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={increseCount}>Increse</button>
+      <button onClick={decreseCount}>Decrese</button>
+    </div>
+  )
 }
 
 
