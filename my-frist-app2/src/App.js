@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 import logo from './logo.svg';
 import './App.css';
 import {Actor} from './avenger.js'
 import { useState } from 'react';
 import {Counter2} from './count.js'
 import { ExternalUser } from './infoUser.js';
+import Countries from './Components/Countries/Countries.js';
+import Person from './Components/Person/Person.js';
 
 function App() {
 
@@ -27,7 +30,10 @@ function App() {
     <div className="App">
 
 
-    <ExternalUser> </ExternalUser>
+    {/* <ExternalUser> </ExternalUser> */}
+
+    <Countries> </Countries>
+    <Person> </Person>
 
 
 

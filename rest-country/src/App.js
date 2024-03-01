@@ -1,10 +1,15 @@
+/* eslint-disable no-unused-vars */
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import Country2 from '../components/Country2/Country2';
 
 function App() {
   return (
     <div className="App">
+
+
+      <h2>THis is so </h2>
 
       <LoadCountries></LoadCountries>
     
