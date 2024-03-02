@@ -6,7 +6,7 @@ import { useState } from 'react';
 import {Counter2} from './count.js'
 import { ExternalUser } from './infoUser.js';
 import Countries from './Components/Countries/Countries.js';
-import Person from './Components/Person/Person.js';
+import Persons from './Components/Person/Person.js';
 
 function App() {
 
@@ -32,8 +32,9 @@ function App() {
 
     {/* <ExternalUser> </ExternalUser> */}
 
-    <Countries> </Countries>
-    <Person> </Person>
+    {/* <Countries> </Countries> */}
+    
+    <Persons> </Persons>
 
 
 
