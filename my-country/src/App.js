@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Country from './components/Country/Country';
+import Countries from './components/Countries/Countries';
 
 
 function App() {
   return (
     <div className="App">
       
-    <h1>this country</h1>
-      <Country></Country>
+      <Countries></Countries>
+
     </div>
   );
 }
