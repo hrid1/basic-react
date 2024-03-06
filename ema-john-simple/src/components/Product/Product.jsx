@@ -1,10 +1,17 @@
-// import React from 'react';
-import './Product.css'
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
+import './Product.css';
 
 const Product = (props) => {
 
+    
+    const  {name, seller, price, ratings , img } = props.product;
+
     // eslint-disable-next-line react/prop-types
-    const  {name, seller, price, ratings , img } = props.country;
+    const handleAddToCart = props.handleAddToCart;
     
 
     return (
@@ -17,7 +24,12 @@ const Product = (props) => {
                 <p>Ratting: {ratings} Stars</p>
             </div>
 
-            <button className='btn-cart'>Add to Cart</button>
+            <button onClick={() => {handleAddToCart(props.product)}} className='btn-cart'>
+                Add to Cart 
+                <FontAwesomeIcon icon={faShoppingCart} />
+
+            
+            </button>
 
             
             

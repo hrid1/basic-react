@@ -13,3 +13,11 @@
     gap: 45px;
 
 }
+
+.cart-container{
+    background-color: rgb(242, 198, 78);
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+
+}

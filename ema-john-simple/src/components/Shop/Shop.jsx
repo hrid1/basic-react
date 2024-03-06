@@ -4,34 +4,35 @@ import './Shop.css'
 import Product from '../Product/Product';
 
 const Shop = () => {
-
-    // const [country, setCountries] = useState([]);
-
-    const [countries, setCountries] = useState([]);
+    const [products, setproducts] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
-
         fetch('./products.json')
         .then(res => res.json())
-        .then(data => setCountries(data))
-
+        .then(data => setproducts(data))
     } , [])
+
+    const handleAddToCart = (product) => {
+        // console.log(product)
+        const newCart = [...cart, product];
+        setCart(newCart)
+    }
     
 
 
     return (
         <section className='shop-section'>
-
             <div className='product-container'>
-                {/* <h2>Prducts: {country.length}</h2> */}
                 {
-                    countries.map(country => <Product key={country.id} 
-                    country={country}> </Product>)
+                    products.map(product => <Product key={product.id} 
+                    product={product} handleAddToCart={handleAddToCart}> </Product>)
                 }
             </div>
 
             <div className='cart-container'>
                 <h2>Order Summary</h2>
+                <p>Total Items: {cart.length}</p>
             </div>
             
         </section>

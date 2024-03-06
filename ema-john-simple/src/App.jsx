@@ -14,7 +14,7 @@ function App() {
    <Header>  </Header>
 
    <Shop>
-    this is hsop </Shop>
+   </Shop>
    
    
     </>
