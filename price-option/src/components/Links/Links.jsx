@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Links = ({route}) => {
     console.log(route)
@@ -11,5 +12,9 @@ const Links = ({route}) => {
     
     );
 };
+
+Links.PropTypes = {
+    route: PropTypes.object
+}
 
 export default Links;
