@@ -1,4 +1,5 @@
 import React from 'react';
+import Singleprice from '../SinglePrice/Singleprice';
 
 const Priceoption = () => {
 
@@ -45,6 +46,12 @@ const Priceoption = () => {
     return (
         <div>
             <h1 className='text-2xl text-center'>This is our price Option</h1>
+            
+            <div className='md:grid grid-cols-3 gap-4'>
+            {
+                priceOptions.map(option => <Singleprice id={option.id} option={option}></Singleprice>)
+            }
+            </div>_
             
         </div>
     );
