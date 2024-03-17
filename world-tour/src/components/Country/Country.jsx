@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Country.css'
 
 const Country = (props) => {
-    // console.log(props);
+    console.log(props);
 
     const [visited , setVisited] = useState(false);
 

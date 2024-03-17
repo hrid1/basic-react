@@ -11,7 +11,7 @@ const Singleprice = ({option}) => {
             <div className='border m-5 p-8 bg-slate-800 text-center rounded-xl flex flex-col'>
 
                 <h1>
-                    <span className=' font-bold text-6xl'>{price}</span> <span className='text-xl'>/mon</span>
+                    <span className=' font-bold text-6xl'>$ {price}</span> <span className='text-xl'>/mon</span>
                 </h1>
                 <h1 className='text-2xl my-3 font-semibold'>
                     {name} Membership
