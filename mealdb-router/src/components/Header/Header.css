@@ -1,0 +1,13 @@
+nav a{
+    margin: 5px;
+}
+
+nav{
+    background-color: black;
+    padding: 5px;
+    text-align: center;
+}
+
+nav a.active {
+    color: red;
+}

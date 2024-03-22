@@ -1,0 +1,11 @@
+.single-Category{
+    background: #000;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 15px;
+}
+
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

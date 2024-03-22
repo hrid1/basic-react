@@ -1,0 +1,11 @@
+.meal-details img{
+    width: 200px;
+}
+
+.meal-details{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+}
