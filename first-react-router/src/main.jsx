@@ -11,11 +11,21 @@ import Header from './components/Header/Header.jsx';
 import About from './components/About/About.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import Profile from './components/Profile/Profile.jsx';
+import User from './components/User/User.jsx';
+import Userinfo from './components/Userinfo/Userinfo.jsx';
+import Posts from './components/Posts/Posts.jsx';
+import Postsingle from './components/Postsingle/Postsingle.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+
+
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
 
     children: [
       {
@@ -29,7 +39,35 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <Profile></Profile>
+      },
+      {
+        path: '/users',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+        element: <User></User>
+        
+      },
+      {
+        path: '/users/:userId',
+        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        element: <Userinfo></Userinfo>
+      },
+      {
+        path: '/posts',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/posts/'),
+        element: <Posts></Posts>
+      },
+
+      {
+        path: '/post/:postId', 
+        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        element: <Postsingle></Postsingle>
+     
+        
+
+        
       }
+      
+      
         
       
     ]

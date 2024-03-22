@@ -1,0 +1,8 @@
+.post-single{
+    background-color: darkolivegreen;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 400px;
+    margin: 15px;
+    padding: 10px;
+}

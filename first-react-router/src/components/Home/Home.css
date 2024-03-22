@@ -1,3 +1,8 @@
 a{
     margin: 10px;
 }
+
+.navbar a.active{
+    color: rgb(0, 255, 119);
+    text-decoration: underline;
+}
